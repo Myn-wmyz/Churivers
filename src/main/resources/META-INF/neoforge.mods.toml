@@ -1,0 +1,27 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="${mod_license}"
+issueTrackerURL="https://example.invalid/chuchuan/issues"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="楚川"
+authors="${mod_authors}"
+description='''楚文化主题内容 Mod：神祇、祭祀、玉石与楚味。
+阶段1：基础材料层。'''
+displayTest="IGNORE_SERVER_VERSION"
+
+[[dependencies.${mod_id}]]
+    modId="neoforge"
+    type="required"
+    versionRange="[21.1.265,21.2)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="minecraft"
+    type="required"
+    versionRange="[1.21.1,1.22)"
+    ordering="NONE"
+    side="BOTH"

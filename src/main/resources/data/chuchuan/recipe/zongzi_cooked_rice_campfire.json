@@ -1,0 +1,1 @@
+{"type": "minecraft:campfire_cooking", "category": "food", "ingredient": {"item": "chuchuan:zongzi_raw_rice"}, "result": {"id": "chuchuan:zongzi_cooked_rice"}, "experience": 0.1, "cookingtime": 600}

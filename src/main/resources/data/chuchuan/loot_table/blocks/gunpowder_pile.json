@@ -1,0 +1,1 @@
+{"type": "minecraft:block", "pools": [{"rolls": 1, "entries": [{"type": "minecraft:item", "name": "chuchuan:gunpowder_pile"}]}], "random_sequence": "chuchuan:blocks/gunpowder_pile"}

@@ -1,0 +1,51 @@
+plugins {
+    id 'java-library'
+    id 'eclipse'
+    id 'idea'
+    id 'maven-publish'
+    id 'net.neoforged.gradle.userdev' version '7.0.192'
+}
+
+version = mod_version
+group = mod_group_id
+
+base {
+    archivesName = mod_id
+}
+
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(21)
+}
+
+minecraft {
+    // 访问变换器 / mixin 等后续阶段再启用
+    runs {
+        client {
+            client()
+        }
+        server {
+            server()
+        }
+    }
+}
+
+dependencies {
+    implementation "net.neoforged:neoforge:${neo_version}"
+}
+
+// 资源目录即 src/main/resources（暂不用 datagen）
+
+
+processResources {
+    filteringCharset = 'UTF-8'
+    filesMatching('META-INF/neoforge.mods.toml') {
+        expand project.properties
+    }
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
+}
+
+subsystems {
+    decompiler {
+        maxMemory = '2g'
+    }
+}

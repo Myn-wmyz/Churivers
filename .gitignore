@@ -1,0 +1,27 @@
+# Gradle 构建缓存与产物
+.gradle/
+build/
+out/
+run/
+runs/
+
+# Java
+*.class
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.settings/
+.classpath
+.project
+bin/
+*.launch
+
+# 系统
+.DS_Store
+Thumbs.db

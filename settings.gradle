@@ -1,0 +1,25 @@
+pluginManagement {
+    repositories {
+        // maven.neoforged.net 的全量镜像（CreeperHost），覆盖 NeoGradle 插件
+        maven { name = 'CreeperHost'; url = 'https://maven.creeperhost.net' }
+        // NeoForge 构件镜像（maven.neoforged.net 在本环境不可达）
+        maven { name = 'BMCLAPI'; url = 'https://bmclapi2.bangbang93.com/maven' }
+        gradlePluginPortal()
+        mavenCentral()
+    }
+}
+
+plugins {
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '0.8.0'
+}
+
+// 项目依赖（net.neoforged:neoforge 等）经镜像解析
+dependencyResolutionManagement {
+    repositories {
+        maven { name = 'CreeperHost'; url = 'https://maven.creeperhost.net' }
+        maven { name = 'BMCLAPI'; url = 'https://bmclapi2.bangbang93.com/maven' }
+        mavenCentral()
+    }
+}
+
+rootProject.name = 'chuchuan'

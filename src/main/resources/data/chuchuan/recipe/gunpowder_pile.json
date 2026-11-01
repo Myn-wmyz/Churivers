@@ -1,0 +1,1 @@
+{"type": "minecraft:crafting_shaped", "pattern": ["GG", "GG"], "key": {"G": {"item": "minecraft:gunpowder"}}, "result": {"id": "chuchuan:gunpowder_pile", "count": 1}}
